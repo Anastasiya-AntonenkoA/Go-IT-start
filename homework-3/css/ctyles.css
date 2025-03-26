@@ -1,3 +1,19 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container { 
+max-width: 1158px;
+padding-left: 15px;
+padding-right:  15px;
+margin: 0 auto; 
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: #434455;
@@ -6,6 +22,8 @@ body {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 a {
@@ -18,21 +36,27 @@ a:hover, a:focus {
 
 /* Header */
 
-.adr {
-    font-style: normal
-}
-.address {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: #434455;
-    text-decoration: none;
+header .container {
+    border-bottom: 1px solid #E7E9FC;
 }
 
-.address:hover, .address:focus {
-    color: #404bbf;
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin-right: 90px;
 }
 
 .title-studio {
@@ -45,14 +69,8 @@ a:hover, a:focus {
     color: #2e2f42;
 }
 
-.title {
-    font-family: "Raleway", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #4d5ae5;
+.head-text {
+    gap: 40px;
 }
 
 .header-text {
@@ -61,13 +79,45 @@ a:hover, a:focus {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.adr {
+    font-style: normal;
+    display: block;
+    padding: 24px 156px 24px auto;
+}
+
+.address {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    text-decoration: none;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.address:hover, .address:focus {
+    color: #404bbf;
 }
 
 /* Header */
 /* main */
 
 .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.section-title {
     background: #2e2f42;
+    padding: 188px;
 }
 
 .name {
@@ -77,6 +127,13 @@ a:hover, a:focus {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
+    min-width: 496px; 
+    margin-bottom: 48px;   
+}
+
+.section-title .container {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .button {
@@ -87,6 +144,10 @@ a:hover, a:focus {
     background: #4d5ae5;
     color: #fff;
     cursor: pointer;
+    border-radius: 4px;
+    height: 56px;
+    width: 169px;
+    border: none;
 }
 
 .butt {
@@ -95,6 +156,15 @@ a:hover, a:focus {
 
 button:hover, button:focus {
     background: #404bbf;
+}
+
+.ul-gualities {
+    display: flex;
+    gap: 24px;
+}
+
+.li1 {
+    flex-basis: calc((100% - 72px) / 4);
 }
 
 .qualities {
@@ -122,8 +192,22 @@ h2, .portfolio {
     text-transform: capitalize;
 }
 
+.name-team {
+    margin-bottom: 72px;
+}
+
+.ul-team {
+    display: flex;
+    gap: 24px;
+}
+
 .team-names {
     background-color: #FFFFFF;
+    flex-basis: calc((100% - 72px) / 4);
+}
+
+.team-names img {
+    margin-bottom: 32px;
 }
 
 .hteam {
@@ -133,6 +217,7 @@ h2, .portfolio {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .text-team {
@@ -141,6 +226,7 @@ h2, .portfolio {
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
+    margin-bottom: 32px;
 }
 
 .section-team {
@@ -154,12 +240,36 @@ h2, .portfolio {
     text-transform: capitalize;
 }
 
+.portfolio {
+    margin-bottom: 72px;
+}
+
+.ul-portf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px 24px;
+}
+
+.li-portf {
+    width: calc((100% - 48px) / 3);
+}
+
+.li-border {
+    border: 1px solid #E7E9FC;
+    border-top: none;
+    padding: 30px 16px;
+}
+
 h3, .name-portfolio {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+}
+
+.name-portfolio {
+    margin-bottom: 8px;
 }
 
 p, .app {
@@ -174,6 +284,7 @@ p, .app {
 
 .footer {
     background: #2e2f42;
+    padding: 100px 156px;
 }
 
 .footer-title {
@@ -184,6 +295,8 @@ p, .app {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
+    display: flex;
+    margin-bottom: 15px;
 }
 
 .footer-studio {
@@ -201,6 +314,7 @@ p, .app {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
+    max-width: 264px;
 }
 
 /* footer */
