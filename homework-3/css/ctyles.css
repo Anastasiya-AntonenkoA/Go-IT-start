@@ -36,12 +36,13 @@ a:hover, a:focus {
 
 /* Header */
 
-header .container {
-    border-bottom: 1px solid #E7E9FC;
+.header {
+    border-bottom: 1px solid #e7e9fc;
 }
 
 .menu {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -56,7 +57,7 @@ header .container {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    margin-right: 90px;
+    margin-right: 76px;
 }
 
 .title-studio {
@@ -117,7 +118,9 @@ header .container {
 
 .section-title {
     background: #2e2f42;
-    padding: 188px;
+    padding: 188px 0;
+    display: flex;
+    align-content: center;
 }
 
 .name {
@@ -127,26 +130,27 @@ header .container {
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    min-width: 496px; 
+    max-width: 496px;
     margin-bottom: 48px;   
 }
 
 .section-title .container {
     margin: 0 auto;
-    text-align: center;
 }
 
 .button {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    justify-content: flex-start;
+    justify-content: center;
     background: #4d5ae5;
     color: #fff;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
     border-radius: 4px;
     height: 56px;
-    width: 169px;
+    min-width: 169px;
     border: none;
 }
 
@@ -158,12 +162,25 @@ button:hover, button:focus {
     background: #404bbf;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .ul-gualities {
     display: flex;
     gap: 24px;
 }
 
-.li1 {
+.li-qualities {
     flex-basis: calc((100% - 72px) / 4);
 }
 
@@ -173,6 +190,7 @@ button:hover, button:focus {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .text-gualities {
@@ -192,6 +210,12 @@ h2, .portfolio {
     text-transform: capitalize;
 }
 
+.section-team {
+    background: #f4f4fd;
+    line-height: 1.11;
+    text-transform: capitalize;
+}
+
 .name-team {
     margin-bottom: 72px;
 }
@@ -204,10 +228,11 @@ h2, .portfolio {
 .team-names {
     background-color: #FFFFFF;
     flex-basis: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
 }
 
-.team-names img {
-    margin-bottom: 32px;
+.team-card {
+    padding: 32px 0;
 }
 
 .hteam {
@@ -226,13 +251,6 @@ h2, .portfolio {
     letter-spacing: 0.02em;
     text-align: center;
     color: #434455;
-    margin-bottom: 32px;
-}
-
-.section-team {
-    background: #f4f4fd;
-    line-height: 1.11;
-    text-transform: capitalize;
 }
 
 .section-portf {
@@ -257,7 +275,7 @@ h2, .portfolio {
 .li-border {
     border: 1px solid #E7E9FC;
     border-top: none;
-    padding: 30px 16px;
+    padding: 32px 16px;
 }
 
 h3, .name-portfolio {
@@ -284,7 +302,7 @@ p, .app {
 
 .footer {
     background: #2e2f42;
-    padding: 100px 156px;
+    padding: 100px 0;
 }
 
 .footer-title {
@@ -296,7 +314,8 @@ p, .app {
     text-transform: uppercase;
     color: #4d5ae5;
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    display: inline-block;
 }
 
 .footer-studio {
@@ -315,6 +334,7 @@ p, .app {
     letter-spacing: 0.02em;
     color: #f4f4fd;
     max-width: 264px;
+
 }
 
 /* footer */
