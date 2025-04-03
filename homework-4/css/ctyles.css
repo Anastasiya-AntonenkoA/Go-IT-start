@@ -38,6 +38,9 @@ a:hover, a:focus {
 
 .header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .menu {
@@ -58,6 +61,7 @@ a:hover, a:focus {
     padding-top: 24px;
     padding-bottom: 24px;
     margin-right: 76px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-studio {
@@ -68,6 +72,7 @@ a:hover, a:focus {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #2e2f42;
+    
 }
 
 .head-text {
@@ -83,6 +88,24 @@ a:hover, a:focus {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+}
+
+.header-studio {
+    position: relative;
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-studio::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #404bbf;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
 }
 
 .adr {
@@ -102,10 +125,12 @@ a:hover, a:focus {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address:hover, .address:focus {
     color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Header */
@@ -115,6 +140,8 @@ a:hover, a:focus {
     padding-top: 120px;
     padding-bottom: 120px;
 }
+
+/*section 1*/
 
 .section-title {
     background: #2e2f42;
@@ -128,6 +155,7 @@ a:hover, a:focus {
     background-repeat: no-repeat;
     background-position: center;
     block-size: cover;
+    background-size: cover;
 }
 
 .name {
@@ -159,6 +187,7 @@ a:hover, a:focus {
     height: 56px;
     min-width: 169px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .butt {
@@ -167,7 +196,10 @@ a:hover, a:focus {
 
 button:hover, button:focus {
     background: #404bbf;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/*section 2*/
 
 .visually-hidden {
     position: absolute;
@@ -229,6 +261,8 @@ h2, .portfolio {
     text-transform: capitalize;
 }
 
+/*section 3*/
+
 .section-team {
     background: #f4f4fd;
     line-height: 1.11;
@@ -280,21 +314,33 @@ h2, .portfolio {
     margin-top: 8px;
 }
 
-.time-icons {
-    display: flex;
+.li-icons {
     width: 40px;
     height: 40px;
+}
+
+.time-icons {
+    display: flex;
+    width: 100%;
+    height: 100%;
     background-color: #4d5ae5;
     fill: #fff;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.time-icons:hover {
+.time-icons:hover, .time-icons:focus {
     background-color: #404BBF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.time-icon {
+    fill:#f4f4fd;
+}
+
+/*section 4*/
 
 .section-portf {
     line-height: 1.11;
@@ -313,6 +359,17 @@ h2, .portfolio {
 
 .li-portf {
     width: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.li-portf:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.li-portf:hover .portf-text-hover{
+    transform: translateY(0);
 }
 
 .li-border {
@@ -333,6 +390,25 @@ h3, .name-portfolio {
     margin-bottom: 8px;
 }
 
+.li-portf-picture {
+    position: relative;
+    overflow: hidden;
+}
+
+.portf-text-hover {
+    position: absolute;
+    top: 0;
+    background-color: #4D5AE5;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    padding: 40px 32px;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 p, .app {
     font-weight: 400;
     font-size: 16px;
@@ -348,8 +424,13 @@ p, .app {
     padding: 100px 0;
 }
 
-.ul-footer {
+.div-footer {
     display: flex;
+    align-items: baseline;
+}
+
+.div-footer-title {
+    margin-right: 120px;
 }
 
 .footer-title {
@@ -360,9 +441,8 @@ p, .app {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    display: flex;
     margin-bottom: 16px;
-    display: inline-block;
+    display: inline-block;    
 }
 
 .footer-studio {
@@ -385,6 +465,9 @@ p, .app {
 
 .footer-media {
     display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+    /* margin-right: 120px; */
 }
 
 .footer-p {
@@ -393,11 +476,7 @@ p, .app {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #fff;
-}
-
-.footer-container {
-    margin-left: 156px;
-    margin-right: 120px;
+    margin-bottom: 16px;
 }
 
 .foot-icon {
@@ -406,24 +485,30 @@ p, .app {
     margin-top: 16px;
 }
 
-.footer-media {
-    display: flex;
-    flex-direction: column;
+.li-footer-icon {
+    width: 40px;
+    height: 40px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-icons {
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     background-color: #4d5ae5;
-    fill: #fff;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.foot-icons:hover {
+.foot-icons:hover, .foot-icons:focus {
     background-color: #31D0AA;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.svg-footer-icon {
+    fill: #f4f4fd;
 }
 
 /* footer */
