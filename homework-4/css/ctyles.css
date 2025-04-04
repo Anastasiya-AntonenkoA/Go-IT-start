@@ -463,12 +463,12 @@ p, .app {
     max-width: 264px;
 }
 
-.footer-media {
+/* .footer-media {
     display: flex;
     flex-direction: column;
     margin-left: 120px;
-    /* margin-right: 120px; */
-}
+    margin-right: 120px;
+} */
 
 .footer-p {
     font-weight: 500;
